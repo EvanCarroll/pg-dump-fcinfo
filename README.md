@@ -6,8 +6,26 @@ stores a C function's context in PostgreSQL.
 
 > [Does PostgreSQL provide anything to dump fcinfo?](https://dba.stackexchange.com/q/302051/2639)
 
-I did. This fixes that.
+I did. This fixes that. Now you can find out the contextual differences between,
 
+```sql
+SELECT dump_fcinfo();
+SELECT * FROM dump_fcinfo();
+SELECT * FROM dump_fcinfo() LIMIT 5;
+SELECT dump_fcinfo() FROM ( VALUES (1) ) AS t(x);
+```
+
+
+Installation
+----
+
+Build and install with,
+
+```sh
+make;
+sudo make install;
+echo "CREATE EXTENSION dump_fcinfo" | psql
+```
 
 Way more work
 ----

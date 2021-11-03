@@ -7,4 +7,4 @@
 
 PG_MODULE_MAGIC;
 
-#include "./src/materialize.c"
+#include "./src/dump_fcinfo.c"
