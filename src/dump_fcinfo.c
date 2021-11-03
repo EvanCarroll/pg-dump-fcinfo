@@ -19,7 +19,6 @@ dump_fcinfo(PG_FUNCTION_ARGS)
 	TupleDesc	      tupdesc = rsinfo->expectedDesc;
 	//rsinfo->setDesc = rsinfo->expectedDesc;
 
-
 	Datum values[] = {
 		BoolGetDatum(false),
 		BoolGetDatum(false),

@@ -7,8 +7,7 @@ RETURNS TABLE(
 	-- https://doxygen.postgresql.org/structTupleDescData.html
 	FmgrInfo_fn_nargs          int, /* arguments in */
 	TupleDescData_natts        int, /* columns out */
-	TupleDescData_strict       bool, /* columns out */
-	whatever int4
+	TupleDescData_strict       bool /* columns out */
 )
 AS 'MODULE_PATHNAME', 'dump_fcinfo'
 LANGUAGE C STRICT VOLATILE;
