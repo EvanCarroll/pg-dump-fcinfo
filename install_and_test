@@ -32,4 +32,10 @@ psql <<EOF
 
 	\echo SELECT dump_fcinfo() FROM ( VALUES (1) ) AS t(x);
 	SELECT dump_fcinfo() FROM ( VALUES (1) ) AS t(x);
+	
+	\echo
+	\echo
+
+	\echo SELECT * FROM ( SELECT dump_fcinfo() ) AS t;
+	SELECT * FROM ( SELECT dump_fcinfo() ) AS t;
 EOF

@@ -32,6 +32,13 @@ tupledescdata_natts        | 7
 tupledescdata_strict       | t
 ```
 
+Quesitons I've Answered (with help)
+----
+
+* Is `ValuePerCall` ever **not** set in `allowedMode`? Answer: no. (confirmed by RhodiumToad)
+* Is `Materialize` ever **not** set in `allowedMode`? Answer: no.
+* [Is `Materialize_Random` ever **not** set in `allowedMode`?](https://dba.stackexchange.com/q/302059/2639)
+
 Installation
 ----
 
