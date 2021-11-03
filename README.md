@@ -15,6 +15,22 @@ SELECT * FROM dump_fcinfo() LIMIT 5;
 SELECT dump_fcinfo() FROM ( VALUES (1) ) AS t(x);
 ```
 
+You can get a result like this,
+
+```text
+=# \x
+Expanded display is on.
+
+=# SELECT * FROM dump_fcinfo();
+-[ RECORD 1 ]--------------+--
+sfrm_valuepercall          | t
+sfrm_materialize           | t
+sfrm_materialize_random    | f
+sfrm_materialize_preferred | t
+fmgrinfo_fn_nargs          | 0
+tupledescdata_natts        | 7
+tupledescdata_strict       | t
+```
 
 Installation
 ----
